@@ -1,0 +1,95 @@
+---
+title: "setting_up_renv"
+format: html
+editor: visual
+---
+
+## Renv
+
+Documentation for renv: <https://rstudio.github.io/renv/>
+
+Notice when you run `.libPaths()` this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.
+
+```{r libpaths, eval= TRUE, include=TRUE}
+.libPaths()
+```
+
+If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `/renv/renv.lock` file.
+
+```{r restore_packages}
+renv::restore()
+```
+
+## Running Code
+
+```{r read_networks, include=TRUE}
+load('data/Glasgow-friendship.RData')
+load('data/Glasgow-substances.RData')
+
+# 3 - Read Data
+
+friendships_t2 <- as.matrix(friendship.2)
+
+friendships_t2[friendships_t2==1] <- 1
+friendships_t2[friendships_t2==2] <- 1
+friendships_t2[friendships_t2==10] <- 0
+
+friendships_t2 <- replace(friendships_t2, is.na(friendships_t2), 0)
+
+tobacco <- as.matrix(tobacco)
+
+student_smoking_t2 <- c(tobacco[,2])
+student_smoking_t2 <- replace(student_smoking_t2, is.na(student_smoking_t2), 0)
+```
+
+## Load packages installed in renv
+
+```{r prepare_data, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+
+lapply(list('dplyr', 'reshape2', 'igraph'), library, character.only = TRUE)
+source("code/00_prepare_data.R")
+```
+
+## Find packages installed in renv
+
+To identify `find.package()`
+
+```{r findpackage, eval= TRUE, include=TRUE}
+find.package('reshape2')
+```
+
+## Add further packages to the renv
+
+```{r installpackage, eval= TRUE, include=TRUE}
+renv::install('sigmajs')
+```
+
+## Friendship Network
+
+Click anywhere on this pane to wake up the plot.
+
+```{r graph1, eval=FALSE, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
+library(sigmajs)
+
+sigmajs() |> 
+      sg_from_igraph(g1) |>  
+      sg_neighbours() |> 
+      sg_settings(drawLabels = TRUE, 
+                  hoverFontStyle = "bold", 
+                  labelColor = "node", 
+                  labelSizeRatio = 3,
+                  defaultLabelHoverColor = "node",
+                  mouseWheelEnabled = TRUE, 
+                  drawEdgeLabels = FALSE,
+                  labelThreshold= 100) |> 
+      sg_drag_nodes() |>  
+      sg_layout() |> 
+      sg_noverlap()
+
+```
+
+## Save changes to the renv
+
+```{r snapshot, eval= TRUE, include=TRUE}
+renv::snapshot()
+```
