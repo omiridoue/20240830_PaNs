@@ -25,16 +25,16 @@ toc: TRUE
 
 Documentation for renv: <https://rstudio.github.io/renv/>
 
-Notice when you run `.libPaths()` this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.
-
-```{r libpaths, eval= TRUE, include=TRUE}
-.libPaths()
-```
-
 If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `/renv/renv.lock` file.
 
 ```{r restore_packages}
 renv::restore()
+```
+
+Notice when you run `.libPaths()` this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.
+
+```{r libpaths, eval= TRUE, include=TRUE}
+.libPaths()
 ```
 
 ## Running Code
