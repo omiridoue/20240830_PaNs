@@ -1,2 +1,8 @@
 image:
     file: .gitpod.Dockerfile
+
+vscode:
+  extensions:
+    - quarto.quarto
+    - REditorSupport.r
+    - RDebugger.r-debugger

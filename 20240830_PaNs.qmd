@@ -44,6 +44,28 @@ student_smoking_t2 <- replace(student_smoking_t2, is.na(student_smoking_t2), 0)
 
 ## Load packages installed in renv
 
+We decided we need a couple more packages to work with. As you run these code chunks one by one, you will be prompted to 
+answer a question in the terminal, this will ask you to confirm the installation to your `renv` to do this type the letter `y`.
+
+```{r installpackage1, eval= TRUE, include=TRUE}
+renv::install('reshape2')
+```
+
+```{r installpackage2, eval= TRUE, include=TRUE}
+renv::install('dplyr')
+```
+
+```{r install_igraph, eval= TRUE, include=TRUE}
+renv::install("igraph") #igraph causes a couple of issues so we need to install the above
+```
+
+If we want to be good about saving these to our default settings then we'll need to take a snapshot of the packages. 
+
+```{r take_a_snapshot, eval= TRUE, include=TRUE}
+#renv::snapshot()
+renv::restore()
+```
+
 ```{r prepare_data, echo=FALSE, message=FALSE, warning=FALSE, include=FALSE}
 
 lapply(list('dplyr', 'reshape2', 'igraph'), library, character.only = TRUE)
@@ -55,7 +77,7 @@ source("code/00_prepare_data.R")
 To identify `find.package()`
 
 ```{r findpackage, eval= TRUE, include=TRUE}
-find.package('reshape2')
+find.package('igraph')
 ```
 
 ## Add further packages to the renv
@@ -91,5 +113,5 @@ sigmajs() |>
 ## Save changes to the renv
 
 ```{r snapshot, eval= TRUE, include=TRUE}
-renv::snapshot()
+#renv::snapshot()
 ```
