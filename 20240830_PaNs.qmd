@@ -1,7 +1,15 @@
 ---
-title: "setting_up_renv"
+title: "Setting up Renv"
+subtitle: "Peers and Networks Workstream"
+author:
+  - name: Eleni Omiridou (PGR)
+    email: 2333157O@student.gla.ac.uk
+    affiliations: School of Health & Wellbeing 
+date: 2024-08-30
+date-format: long
 format: html
 editor: visual
+from: markdown+emoji
 ---
 
 ## Renv
@@ -44,8 +52,7 @@ student_smoking_t2 <- replace(student_smoking_t2, is.na(student_smoking_t2), 0)
 
 ## Load packages installed in renv
 
-We decided we need a couple more packages to work with. As you run these code chunks one by one, you will be prompted to 
-answer a question in the terminal, this will ask you to confirm the installation to your `renv` to do this type the letter `y`.
+We decided we need a couple more packages to work with. As you run these code chunks one by one, you will be prompted to answer a question in the terminal, this will ask you to confirm the installation to your `renv` to do this type the letter `y`.
 
 ```{r installpackage1, eval= TRUE, include=TRUE}
 renv::install('reshape2')
@@ -59,7 +66,7 @@ renv::install('dplyr')
 renv::install("igraph") #igraph causes a couple of issues so we need to install the above
 ```
 
-If we want to be good about saving these to our default settings then we'll need to take a snapshot of the packages. 
+If we want to be good about saving these to our default settings then we'll need to take a snapshot of the packages. To do this you will need to uncomment the first command in the following code chunk telling renv you'd like to take a snapshot of the current state of the packages you've installed. Remember we installed a couple of packages on top of the pre-specified ones in the lock file you received. If you are only testing around packages maybe it's best to not save these in a snapshot, otherwise your workspace will no longer be in sync.
 
 ```{r take_a_snapshot, eval= TRUE, include=TRUE}
 #renv::snapshot()
@@ -90,7 +97,7 @@ renv::install('sigmajs')
 
 Click anywhere on this pane to wake up the plot.
 
-```{r graph1, eval=FALSE, echo=FALSE, message=FALSE, warning=FALSE, output=TRUE}
+```{r graph1, eval=TRUE, echo=TRUE, message=FALSE, warning=FALSE, output=TRUE}
 library(sigmajs)
 
 sigmajs() |> 
@@ -110,7 +117,9 @@ sigmajs() |>
 
 ```
 
-## Save changes to the renv
+## Now save changes to your Lock file
+
+##### Uncomment this command if you'd like to save the changes you've made to your environment and send it off to your collaborator, so you're both on the same page :v:
 
 ```{r snapshot, eval= TRUE, include=TRUE}
 #renv::snapshot()

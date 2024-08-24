@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "20240830_PaNs.html",
+    "href": "20240830_PaNs.html",
+    "title": "Setting up Renv",
+    "section": "",
+    "text": "Documentation for renv: https://rstudio.github.io/renv/\nNotice when you run .libPaths() this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.\n\n.libPaths()\n\n[1] \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\"\n[2] \"C:/Users/2333157O/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/afb219b1\"\n\n\nIf you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the /renv/renv.lock file.\n\nrenv::restore()\n\n- The library is already synchronized with the lockfile."
+  },
+  {
+    "objectID": "20240830_PaNs.html#renv",
+    "href": "20240830_PaNs.html#renv",
+    "title": "Setting up Renv",
+    "section": "",
+    "text": "Documentation for renv: https://rstudio.github.io/renv/\nNotice when you run .libPaths() this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.\n\n.libPaths()\n\n[1] \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\"\n[2] \"C:/Users/2333157O/AppData/Local/R/cache/R/renv/sandbox/windows/R-4.4/x86_64-w64-mingw32/afb219b1\"\n\n\nIf you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the /renv/renv.lock file.\n\nrenv::restore()\n\n- The library is already synchronized with the lockfile."
+  },
+  {
+    "objectID": "20240830_PaNs.html#running-code",
+    "href": "20240830_PaNs.html#running-code",
+    "title": "Setting up Renv",
+    "section": "Running Code",
+    "text": "Running Code\n\nload('data/Glasgow-friendship.RData')\nload('data/Glasgow-substances.RData')\n\n# 3 - Read Data\n\nfriendships_t2 &lt;- as.matrix(friendship.2)\n\nfriendships_t2[friendships_t2==1] &lt;- 1\nfriendships_t2[friendships_t2==2] &lt;- 1\nfriendships_t2[friendships_t2==10] &lt;- 0\n\nfriendships_t2 &lt;- replace(friendships_t2, is.na(friendships_t2), 0)\n\ntobacco &lt;- as.matrix(tobacco)\n\nstudent_smoking_t2 &lt;- c(tobacco[,2])\nstudent_smoking_t2 &lt;- replace(student_smoking_t2, is.na(student_smoking_t2), 0)"
+  },
+  {
+    "objectID": "20240830_PaNs.html#load-packages-installed-in-renv",
+    "href": "20240830_PaNs.html#load-packages-installed-in-renv",
+    "title": "Setting up Renv",
+    "section": "Load packages installed in renv",
+    "text": "Load packages installed in renv\nWe decided we need a couple more packages to work with. As you run these code chunks one by one, you will be prompted to answer a question in the terminal, this will ask you to confirm the installation to your renv to do this type the letter y.\n\nrenv::install('reshape2')\n\nThe following package(s) will be installed:\n- reshape2 [1.4.4]\nThese packages will be installed into \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing reshape2 ...                       OK [linked from cache]\nSuccessfully installed 1 package in 11 milliseconds.\n\n\n\nrenv::install('dplyr')\n\nThe following package(s) will be installed:\n- dplyr [1.1.4]\nThese packages will be installed into \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing dplyr ...                          OK [linked from cache]\nSuccessfully installed 1 package in 9.8 milliseconds.\n\n\n\nrenv::install(\"igraph\") #igraph causes a couple of issues so we need to install the above\n\nThe following package(s) will be installed:\n- igraph [2.0.3]\nThese packages will be installed into \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing igraph ...                         OK [linked from cache]\nSuccessfully installed 1 package in 9.4 milliseconds.\n\n\nIf we want to be good about saving these to our default settings then we’ll need to take a snapshot of the packages. To do this you will need to uncomment the first command in the following code chunk telling renv you’d like to take a snapshot of the current state of the packages you’ve installed. Remember we installed a couple of packages on top of the pre-specified ones in the lock file you received. If you are only testing around packages maybe it’s best to not save these in a snapshot, otherwise your workspace will no longer be in sync.\n\n#renv::snapshot()\nrenv::restore()\n\n- The library is already synchronized with the lockfile."
+  },
+  {
+    "objectID": "20240830_PaNs.html#find-packages-installed-in-renv",
+    "href": "20240830_PaNs.html#find-packages-installed-in-renv",
+    "title": "Setting up Renv",
+    "section": "Find packages installed in renv",
+    "text": "Find packages installed in renv\nTo identify find.package()\n\nfind.package('igraph')\n\n[1] \"C:/Users/2333157O/AppData/Local/R/cache/R/renv/cache/v5/windows/R-4.4/x86_64-w64-mingw32/igraph/2.0.3/c3b7d801d722e26e4cd888e042bf9af5/igraph\""
+  },
+  {
+    "objectID": "20240830_PaNs.html#add-further-packages-to-the-renv",
+    "href": "20240830_PaNs.html#add-further-packages-to-the-renv",
+    "title": "Setting up Renv",
+    "section": "Add further packages to the renv",
+    "text": "Add further packages to the renv\n\nrenv::install('sigmajs')\n\nThe following package(s) will be installed:\n- sigmajs [0.1.5]\nThese packages will be installed into \"C:/Users/2333157O/Documents/projects/20240814_PaNs/renv/library/windows/R-4.4/x86_64-w64-mingw32\".\n\n# Installing packages --------------------------------------------------------\n- Installing sigmajs ...                        OK [linked from cache]\nSuccessfully installed 1 package in 9.7 milliseconds."
+  },
+  {
+    "objectID": "20240830_PaNs.html#friendship-network",
+    "href": "20240830_PaNs.html#friendship-network",
+    "title": "Setting up Renv",
+    "section": "Friendship Network",
+    "text": "Friendship Network\nClick anywhere on this pane to wake up the plot.\n\nlibrary(sigmajs)\n\nsigmajs() |&gt; \n      sg_from_igraph(g1) |&gt;  \n      sg_neighbours() |&gt; \n      sg_settings(drawLabels = TRUE, \n                  hoverFontStyle = \"bold\", \n                  labelColor = \"node\", \n                  labelSizeRatio = 3,\n                  defaultLabelHoverColor = \"node\",\n                  mouseWheelEnabled = TRUE, \n                  drawEdgeLabels = FALSE,\n                  labelThreshold= 100) |&gt; \n      sg_drag_nodes() |&gt;  \n      sg_layout() |&gt; \n      sg_noverlap()"
+  },
+  {
+    "objectID": "20240830_PaNs.html#now-save-changes-to-your-lock-file",
+    "href": "20240830_PaNs.html#now-save-changes-to-your-lock-file",
+    "title": "Setting up Renv",
+    "section": "Now save changes to your Lock file",
+    "text": "Now save changes to your Lock file\n\nUncomment this command if you’d like to save the changes you’ve made to your environment and send it off to your collaborator, so you’re both on the same page ✌️\n\n#renv::snapshot()"
+  }
+]
