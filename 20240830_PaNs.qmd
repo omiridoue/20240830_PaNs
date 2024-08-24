@@ -130,6 +130,6 @@ sigmajs() |>
 
 ##### Uncomment this command if you'd like to save the changes you've made to your environment and send it off to your collaborator, so you're both on the same page :v:
 
-```{r snapshot, eval= TRUE, include=TRUE}
+```{r snapshot_settings, eval= TRUE, include=TRUE}
 #renv::snapshot()
 ```
