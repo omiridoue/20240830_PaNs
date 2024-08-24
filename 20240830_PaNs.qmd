@@ -10,6 +10,7 @@ date-format: long
 format: html
 editor: visual
 from: markdown+emoji
+toc: TRUE
 ---
 
 ## Renv
