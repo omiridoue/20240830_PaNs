@@ -25,7 +25,7 @@ toc: TRUE
 
 Documentation for renv: <https://rstudio.github.io/renv/>
 
-If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `/renv/renv.lock` file.
+If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `renv.lock` file.
 
 ```{r restore_packages}
 renv::restore()
