@@ -27,6 +27,6 @@ You have 50 hours free work time per month! This is quite generous and means you
 
 Once you work your way through loading the renv pre-specified files in the `renv.lock` you will install additional packages along the way. To save these to your lock file you will need to uncomment the following line of code in the final chunk, `renv::snapshot()`. Click `Ctrl+S` to save changes to your quarto file. As soon as you do this you will see the version control on the left pane has flagged to you that something's changed. To practice using git you will need to click onto the tab below and follow the steps to committing your upadated qmd file and `renv.lock` files. Note because you don't have owner access to the repository you will be prompted to fork 
 the repository before you're able to commit any changes. Then you can follow along additional steps through GitHub to merge your updated code to the original repository
-you are contributing to through a merge pull request, this might be a task for another day though. Well done :happy: !
+you are contributing to through a merge pull request, this might be a task for another day though. Well done ✨✨ !
 
 ![alt text](images/step5.png)
