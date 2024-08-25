@@ -29,7 +29,7 @@ You have 50 hours free work time per month! This is quite generous and means you
 
 or if there is no pop-up, try changing the language console from R to RMarkdown 
 
-![alt text](images/step4_additional.png)
+![alt text](images/step4_added.png)
 
 ### Step 7: Make Changes to the File
 
