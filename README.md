@@ -11,3 +11,10 @@
 ### Step 2: Make Sure you've Selected the 20240830_PaNs Current Repository
 
 ![alt text](images/step2.png)
+
+### Step 3: Click on the Quarto File we'll be working with
+![alt text](images/step3.png)
+
+### Step 4: Click Yes to Install R Language Interpreter
+
+![alt text](images/step4.png)
