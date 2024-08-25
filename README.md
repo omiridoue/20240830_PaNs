@@ -1,6 +1,6 @@
 ## To Follow Along Launch a Workspace
 
-### Step 1: t
+### Step 1: Click the Button Below to Launch Workspace for this Repo
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#github.com/omiridoue/20240830_PaNs)
 
