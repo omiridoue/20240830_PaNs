@@ -23,7 +23,11 @@ toc: TRUE
 
 ## Renv
 
-Documentation for renv: <https://rstudio.github.io/renv/>
+To use renv we will need to install it as a package first. Documentation for renv: https://rstudio.github.io/renv/
+
+```{r installrenv, include=FALSE}
+install.packages("renv")
+```
 
 If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `renv.lock` file.
 
