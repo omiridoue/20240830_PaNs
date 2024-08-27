@@ -1,10 +1,9 @@
 # To Follow Along Launch a Workspace
 
 You can set up an account or sign up with GitHub. You can access the workspace by cloning the following repository. This saves the hassle of setting up on your local computer.
-![alt text](rstudio_cloud.png)
+![alt text](images/rstudio_cloud.png)
 
-You will just need to copy the following URL to set up the repository,
-https://github.com/omiridoue/20240830_PaNs
+You will just need to copy the following URL to set up the repository, https://github.com/omiridoue/20240830_PaNs
 
 ## GitPod 
 
