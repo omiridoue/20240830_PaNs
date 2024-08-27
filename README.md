@@ -1,4 +1,15 @@
-## To Follow Along Launch a Workspace
+# To Follow Along Launch a Workspace
+
+You can set up an account or sign up with GitHub. You can access the workspace by cloning the following repository. This saves the hassle of setting up on your local computer.
+![alt text](rstudio_cloud.png)
+
+You will just need to copy the following URL to set up the repository,
+https://github.com/omiridoue/20240830_PaNs
+
+## GitPod 
+
+GitPod is an alternative to RStudio Cloud. The free plan involves 50 hours unlike 25 hours in RStudio Cloud. While the latter keeps RStudio as an IDE the former lets you pick from a couple of options. Your choice will depend on your purpose and motivation to work on a project. Both are based
+off a similar concept, they establish a remote connection to a Linux machine. 
 
 ### [Optional] Step 1: Follow the Invite Link to Join as Collaborator
 
