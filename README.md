@@ -1,4 +1,13 @@
-# To Follow Along Launch a Workspace
+# The Following Motivates a Discussion around Renv in our Projects
+
+Please clone/fork this repository like you normally would. Otherwise if you do not want to follow along on your local computer, you can opt to launch a workspace.
+There are two options listed below one using RStudio Cloud and the other GitPod. Either one offers the option to sign-up for an account using your GitHub credentials.
+Once again if you would like to apply for a GitHub Education account this is highly recommended as it gives you added features within GitHub. This is free as long as you
+have used your @gla.ac.uk email at the time you created an account with GitHub.
+
+Note the main difference between either workspace will be the interface, RStudio Cloud naturally sets up an RStudio interface while GitPod gives you the flexibility to choose between a couple of options one of the most used ones is VS Code. There are also a couple more differences in the resources (compute time/memory/cores) you get in the Free Plan tier on either platform so it is up to you which one you go for.
+
+## RStudio Cloud
 
 You can set up an account or sign up with GitHub. You can access the workspace by cloning the following repository. This saves the hassle of setting up on your local computer.
 ![alt text](images/rstudio_cloud.png)
