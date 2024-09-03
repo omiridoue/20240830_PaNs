@@ -23,7 +23,7 @@ toc: TRUE
 
 ## Renv
 
-To use renv we will need to install it as a package first. Documentation for renv: https://rstudio.github.io/renv/
+To use renv we will need to install it as a package first. Documentation for renv: <https://rstudio.github.io/renv/>
 
 ```{r installrenv, include=FALSE}
 install.packages("renv")
@@ -82,7 +82,6 @@ renv::install("igraph") #igraph causes a couple of issues so we need to install 
 If we want to be good about saving these to our default settings then we'll need to take a snapshot of the packages. To do this you will need to uncomment the first command in the following code chunk telling renv you'd like to take a snapshot of the current state of the packages you've installed. Remember we installed a couple of packages on top of the pre-specified ones in the lock file you received. If you are only testing around packages maybe it's best to not save these in a snapshot, otherwise your workspace will no longer be in sync.
 
 ```{r take_a_snapshot, eval= TRUE, include=TRUE}
-#renv::snapshot()
 renv::restore()
 ```
 
