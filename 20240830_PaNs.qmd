@@ -5,7 +5,7 @@ author:
   - name: Eleni Omiridou (PGR)
     email: 2333157O@student.gla.ac.uk
     affiliations: School of Health & Wellbeing 
-date: 2024-08-30
+date: 2024-09-24
 date-format: long
 format:
   html:
@@ -27,6 +27,7 @@ To use renv we will need to install it as a package first. Documentation for ren
 
 ```{r installrenv, include=FALSE}
 install.packages("renv")
+#install.packages("knitr") # you might need to download this package if you want to render the document on RStudio Cloud as it does not come pre-installed, otherwise you can opt run the code chunks one by one
 ```
 
 If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `renv.lock` file.
