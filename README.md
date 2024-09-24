@@ -11,10 +11,14 @@ Note the main difference between either workspace will be the interface, RStudio
 
 ## RStudio Cloud
 
+To set-up using R Studio Cloud please follow the link to the
+[https://login.posit.cloud/login?redirect=%2Foauth%2Fauthorize%3Fredirect_uri%3Dhttps%253A%252F%252Fposit.cloud%252Flogin%26client_id%3Dposit-cloud%26response_type%3Dcode%26show_auth%3D0&product=cloud](Login Page)
+
 You can set up an account or sign up with GitHub. You can access the workspace by cloning the following repository. This saves the hassle of setting up on your local computer.
 ![alt text](images/rstudio_cloud.png)
 
-You will just need to copy the following URL to set up the repository, https://github.com/omiridoue/20240830_PaNs
+Following the example in the above figure you will need to loacte to Your Workspace > New Project > New Project from Git Repo. 
+You will then be prompted to enter the details of the repository, to select this one looking at renv you'll need to copy the following URL to set up the repository and paste it in the prompt, https://github.com/omiridoue/20240830_PaNs
 
 ## GitPod 
 
