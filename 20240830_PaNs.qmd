@@ -25,7 +25,7 @@ toc: TRUE
 
 To use renv we will need to install it as a package first. We're not looking for any particular version so if you install it using the following command you will get the most up-to-date version. It may be worth taking a closer look at the documentation for renv: <https://rstudio.github.io/renv/>
 
-```{r installrenv, include=FALSE}
+```{r installrenv, include=TRUE}
 install.packages("renv")
 #install.packages("knitr") # you might need to download this package if you want to render the document on RStudio Cloud as it does not come pre-installed, otherwise you can opt run the code chunks one by one
 ```
