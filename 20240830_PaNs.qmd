@@ -23,20 +23,22 @@ toc: TRUE
 
 ## Renv
 
-To use renv we will need to install it as a package first. Documentation for renv: <https://rstudio.github.io/renv/>
+To use renv we will need to install it as a package first. We're not looking for any particular version so if you install it using the following command you will get the most up-to-date version. It may be worth taking a closer look at the documentation for renv: <https://rstudio.github.io/renv/>
 
 ```{r installrenv, include=FALSE}
 install.packages("renv")
 #install.packages("knitr") # you might need to download this package if you want to render the document on RStudio Cloud as it does not come pre-installed, otherwise you can opt run the code chunks one by one
 ```
 
-If you working with a folder that has already set up an renv you can run the following command to install the packages and their versions which are described in the `renv.lock` file.
+This folder has already set up an R environment. This means whenever you pick up a project that has this feature you can restore a self-contained set-up that will be identical to say another team member.
+
+At this stage we'll want to restore this environment, think of it as a folder where all of the packages will be installed in. This is totally separate to your own set-up whenever you open and work with R, so it also means you can avoid many of the conflicts that might arise whenever any of those dependencies need to change. As this is a reproducible environment we'll need to install the pre-specified packages and the exact versions. All of this inormation has been recorded and stored in the `renv.lock` file.
 
 ```{r restore_packages}
 renv::restore()
 ```
 
-Notice when you run `.libPaths()` this returns the path to your system path, where R is downloaded under your local programs folder. The second path will be to a new directory which is created every time you create an renv set-up.
+Notice when you run `.libPaths()` this returns the path to your system path, where R is downloaded under your local programs folder. The second path will point you to a new directory (folder) which is created every time you make a new renv.
 
 ```{r libpaths, eval= TRUE, include=TRUE}
 .libPaths()
