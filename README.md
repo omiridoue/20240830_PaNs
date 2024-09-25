@@ -16,7 +16,7 @@ To set-up using R Studio Cloud please follow the link to the [Login Page](https:
 You can set up an account or sign up with GitHub. You can access the workspace by cloning the following repository. This saves the hassle of setting up on your local computer.
 ![alt text](images/rstudio_cloud.png)
 
-Following the example in the above figure you will need to loacte to `Your Workspace > New Project > New Project` from Git Repo. 
+Following the example in the above figure you will need to loacte to `Your Workspace > New Project > New Project from Git Repo`. 
 You will then be prompted to enter the details of the repository, to select this one looking at renv you'll need to copy the following URL to set up the repository and paste it in the prompt, https://github.com/omiridoue/20240830_PaNs
 
 ## GitPod 
